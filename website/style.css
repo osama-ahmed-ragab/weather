@@ -1,0 +1,194 @@
+:root {
+  --color-primary: #f23557;
+  --color-secondary: #1b1b35;
+  --color-accent: rgb(58, 240, 97);
+  --color-dark: #000;
+  --color-light: #fff;
+}
+
+*, 
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 70%;
+}
+
+body {
+  background: var(--color-accent);
+  color: var(--color-dark);
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;  
+}
+
+.wrapperApp {
+  background: url(./img/96-964582_material-design-wallpapers-desktop-material-design-background-weather.jpg) no-repeat center center/ cover;
+  height: 100vh;
+  padding: 8.3rem;
+  width: 100vw;
+}
+
+#app {
+  align-items: stretch;
+  background: transparent;
+  border-radius: 2rem;
+  box-shadow: 0 2rem 1rem rgba(0,0,0,0.4);
+  display: flex;
+  flex-direction: column;
+  height: 99%;
+  justify-content: space-between;
+  margin: 0 auto;
+  text-align: center;
+  width: 55vw;
+}
+
+.headLine {
+  background-color: var(--color-accent);
+  border-top-left-radius: inherit;
+  border-top-right-radius: inherit;
+}
+
+.headLineHeading {
+  color: var(--color-dark);
+  font-family: 'Raleway', sans-serif;
+  font-size: 3.5rem;
+  letter-spacing: 0.6rem;
+  padding: 1.5rem 0;
+  text-transform: uppercase;
+}
+
+@media only screen and (min-width: 951px) {
+  .headLineHeading {
+    font-size: 3rem;
+  }
+}
+
+.appForm {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin: 0 auto;
+  min-height: 60%;
+  width: 75%;
+}
+
+.appForm div label {
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 1.6rem;
+  left: 2.5rem;
+  position: absolute;
+  top: 2.5rem;
+  transition: 0.5s;
+}
+
+#app input:focus ~ label,
+#app textarea:focus ~ label,
+#app input:valid ~ label,
+#app textarea:valid ~ label {
+  font-size: 1.5rem;
+  transform: translateY(-2rem);
+}
+
+#app input:focus,
+#app textarea:focus {
+  border: 0.3rem solid var(--color-accent);
+}
+
+
+#zipCode,
+#howUFellings {
+  background: var(--color-secondary);
+  border: 0.5rem solid var(--color-dark);
+  border-radius: 1rem;
+  color: var(--color-accent);
+  display: block;
+  font-size: 2.5rem;
+  height: 7rem;
+  text-align: center;
+  width: 100%;
+}
+
+.zipCode {
+  position: relative;
+  width: 100%;
+}
+
+#zipCode {
+  padding: 1.5rem 1rem;
+  width: 100%;
+}
+
+  
+/* howUFellings field */
+
+.howUFell {
+  position: relative;
+  width: 100%;
+}
+
+#howUFellings {
+  overflow: hidden;
+  padding: 2rem;
+  resize: none;
+}
+
+#submit {
+  background: var(--color-accent);
+  border: 0.2rem solid var(--color-dark);
+  color: var(--color-dark);
+  cursor:pointer;
+  font-family: 'Raleway', sans-serif;
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+
+
+.recentEntery {
+  background: rgba(59, 74, 107, 0.4);
+  border-bottom-left-radius: inherit;
+  border-bottom-right-radius: inherit;
+  color: #fff;
+  font-family: 'Raleway', sans-serif;
+  height: 13rem;
+  text-shadow: 0 0.3rem 1rem rgba(0,0,0,0.7);
+}
+
+.recentEntery__title {
+  color: var(--color-accent);
+  font-size: 1.8rem;
+  font-weight: bold;
+  letter-spacing: 0.2rem;
+  text-shadow: 0 0.3rem 0.3rem rgba(0,0,0,0.9);
+  margin: 2rem 0 1rem 0;
+  text-transform: uppercase;
+}
+
+#recentEnteryHolder {
+  align-items: center;
+  display: flex;
+  font-size: 1.2rem;
+  justify-content: space-evenly;
+  padding: 2rem 0;
+}
+
+
+.recentEntery__date,
+.recentEntery__temp,
+.recentEntery__content {
+  display: flex;
+  align-items: center;
+}
+
+
+
+@media only screen and (min-width: 1200px) {
+  .recentEntery__content {
+    flex: none;
+  }
+}

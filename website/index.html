@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Weather Journal App</title>
+  <script src="https://kit.fontawesome.com/a83dba7890.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Raleway|Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="wrapperApp">
+    <div id="app">
+      <div class="holder headLine">
+        <h1 class="headLineHeading">Weather Journal App</h1>
+      </div>
+      <form class="appForm" autocomplete="off">
+        <div class="holder zipCode">
+          <input type="text" id="zipCode" maxlength="10" required="" placeholder="">
+          <label for="zipCode" class="zipCode__label">Enter zipCode code here, Please !!</label>
+        </div>
+        <div class="holder howUFell">
+          <textarea class="howUFell__input" id="howUFellings" maxlength="35" required=""></textarea>
+          <label for="howUFellings">How are you howUFelling today?</label>
+        </div>
+        <button id="submit" type="submit"> Submit </button>
+      </form>
+      <div class="holder recentEntery">
+        <h2 class="recentEntery__title">Most Recent recentEntery</h2>
+        <div id="recentEnteryHolder">
+          <div class="recentEntery__date">
+            <i class="fas fa-calendar-day recentEntery__icon"></i>
+            <div id="date"></div>
+          </div>
+          <div class="recentEntery__temp">
+            <i class="fas fa-thermometer-half recentEntery__icon"></i>
+            <div id="temp"></div>
+          </div>
+          <div class="recentEntery__content">
+            <i class="fas fa-user-circle recentEntery__icon"></i>
+            <div id="content"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  <script src="app.js" type="text/javascript"></script>
+  <script src="server.js" type="text/javascript"></script> 
+
+</body>
+
+</html>
